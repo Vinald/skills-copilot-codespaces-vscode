@@ -1,16 +1,9 @@
-// create web server
+// Create web server
+// Create a web server that listens on port 3000 and serves the comments.html file. Use the fs module to read the file and send it to the client.
 
-const http = require("http");
+// The comments.html file should be served when you access http://localhost:3000 in your browser.
 
-const hostname = "127.0.0.1";
-const port = 3000;
+// The comments.html file should be in the same directory as the comments.js file.
 
-const server = http.createServer((req, res) => {
-    res.statusCode = 200;
-    res.setHeader("Content-Type", "text/plain");
-    res.end("Hello, World!\n");
-});
+// The comments.html file should contain the following HTML:
 
-server.listen(port, hostname, () => {
-    console.log(`Server running at http://${hostname}:${port}/`);
-});
