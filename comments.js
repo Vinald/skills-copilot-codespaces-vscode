@@ -1,9 +1,15 @@
+const http = require('http');
+
 // create web server
-// create a route for comments
-// create a route for comments/new
-// create a route for comments/:id
-// create a route for comments/:id/edit
-// create a route for comments/:id/delete
-// create a route for comments/:id/like
-// create a route for comments/:id/dislike
-// create a route for comments/:id/replies
+const hostname = '127.0.0.1';
+const port = 3000;
+
+const server = http.createServer((req, res) => {
+    res.statusCode = 200;
+    res.setHeader('Content-Type', 'text/plain');
+    res.end('Hello, World!\n');
+});
+
+server.listen(port, hostname, () => {
+    console.log(`Server running at http://${hostname}:${port}/`);
+});
